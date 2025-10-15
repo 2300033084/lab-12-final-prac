@@ -24,7 +24,7 @@ services:
       context: ./backend-jenkins
       dockerfile: backend.Dockerfile
     ports:
-      - "2025:2001"
+      - "2025:2002"
     depends_on:
       - mysqldb
     restart: on-failure
@@ -32,7 +32,7 @@ services:
       - springboot-mysql-net
 
   frontend:
-    image:
+   
     container_name: pracreact
     build:
       context: ./frontend-jenkins
